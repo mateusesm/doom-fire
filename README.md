@@ -1,3 +1,3 @@
-### Tema em pixels do fogo do DOM 
+### DOM Fire Pixel Theme
 
-Tema em pixels do fogo do DOM feito em HTML, CSS e JavaScript
+DOM Fire pixel theme made only with HTML, CSS and JavaScript.
