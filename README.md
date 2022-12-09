@@ -2,4 +2,4 @@
 
 DOM Fire pixel theme made only with HTML, CSS/SASS and JavaScript.
 
-Project still development.
+(under development)
