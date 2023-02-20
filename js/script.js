@@ -8,14 +8,11 @@
         const line = 10
         const column = 10
 
-        let index = 0
-        let table = ''
-
         let counter = 0
 
         for (let i = 99; i >= 0; i--) {
        
-           if (counter === 10) break
+            if (counter === 10) break
             
             if (arrayFire[i] === 0) {
                 arrayFire[i] = fireIntensity
@@ -24,15 +21,20 @@
                 counter = 0
                 continue
             }   
-        }            
-
+        }
+        
+        let index = 0
+        let table = ''
         table = '<table class="fire-data">'
 
         for (let i = 0; i < line; i++) {
             table += '<tr>'
             for (let j = 0; j < column; j++) {
-                table += `<td>${arrayFire[index]}<span>${index}</span></td>`
-                index++                   
+                const color = fireColorsPalette[arrayFire[index]]
+                const colorString = `${color.r}, ${color.g}, ${color.b}`
+
+                table += `<td style="background-color: rgb(${colorString});" >${arrayFire[index]}</td>`
+                index++                            
             }
         }
 
@@ -52,11 +54,30 @@
     }
 
     const start = () => {
+        let decay = 12
         let fireIntensity = 36
-        const arrayFire = generateArray()
-      
-        renderFireCanvas(fireIntensity, arrayFire)
-    }
+        let controlArray = 0
+        let arrayFire = generateArray()
+        
+        setInterval(() => {
+            if (controlArray === 10) {
+                fireIntensity = 36
+                arrayFire = generateArray()
+                controlArray = 0
+            }
 
+            renderFireCanvas(fireIntensity, arrayFire)
+
+            fireIntensity = fireIntensity - Math.floor(Math.random() * decay)
+
+            if (fireIntensity < 0) {
+               fireIntensity = 0
+            }
+
+            controlArray++
+            
+        }, 100)
+            
+    }
     start()
 })();
