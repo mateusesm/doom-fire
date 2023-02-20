@@ -13,8 +13,8 @@ div.fire-container {
 }
     
 table.fire-data {
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     border-spacing: 0px;
     border: 0.1rem solid rgba(0, 0, 0, 0.7);
 }

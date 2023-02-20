@@ -41,7 +41,6 @@
         table += '</tr>'
         table += '</table>'
         divContainer.innerHTML = table
-  
     }
 
     const generateArray = () => {
