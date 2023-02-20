@@ -13,9 +13,9 @@ div.fire-container {
 }
     
 table.fire-data {
-    width: 15rem;
-    height: 15rem;
-    border-spacing: 0px;
+    width: 20rem;
+    height: 20rem;
+    border-spacing: 0;
     border: 0.1rem solid #000;
 }
 
@@ -23,6 +23,12 @@ table.fire-data td {
     text-align: center;
     font-size: 10px;
     border: 0.1rem solid rgba(0, 0, 0, 0.5);
+}
+
+table.fire-data td.pixel {
+    width: 0.1rem;
+    height: 0.1rem;
+    border: none;
 }
 
 table.fire-data td span {

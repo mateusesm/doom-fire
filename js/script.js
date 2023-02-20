@@ -5,14 +5,14 @@
 
     const renderFireCanvas = (fireIntensity, arrayFire) => {
         const divContainer = document.querySelector('.fire-container')
-        const line = 10
-        const column = 10
+        const line = 60
+        const column = 60
 
         let counter = 0
 
-        for (let i = 99; i >= 0; i--) {
+        for (let i = 3599; i >= 0; i--) {
        
-            if (counter === 10) break
+            if (counter === 60) break
             
             if (arrayFire[i] === 0) {
                 arrayFire[i] = fireIntensity
@@ -33,7 +33,7 @@
                 const color = fireColorsPalette[arrayFire[index]]
                 const colorString = `${color.r}, ${color.g}, ${color.b}`
 
-                table += `<td style="background-color: rgb(${colorString});" >${arrayFire[index]}</td>`
+                table += `<td class="pixel" style="background-color: rgb(${colorString});"></td>`
                 index++                            
             }
         }
@@ -46,20 +46,20 @@
     const generateArray = () => {
         let arrayFire = []
 
-        for (let i = 0; i <= 99; i++) {
+        for (let i = 0; i <= 3599; i++) {
             arrayFire[i] = 0
         }
         return arrayFire
     }
 
     const start = () => {
-        let decay = 15
+        let decay = 3
         let fireIntensity = 36
         let controlArray = 0
         let arrayFire = generateArray()
         
         setInterval(() => {
-            if (controlArray === 10) {
+            if (controlArray === 60) {
                 fireIntensity = 36
                 arrayFire = generateArray()
                 controlArray = 0
@@ -75,7 +75,7 @@
 
             controlArray++
             
-        }, 100)
+        }, 60)
             
     }
     start()
