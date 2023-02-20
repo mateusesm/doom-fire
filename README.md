@@ -1,5 +1,5 @@
-### DOM Fire Pixel Theme
+### DOOM Fire Pixel Theme
 
-DOM Fire pixel theme made only with HTML, CSS/SASS and JavaScript.
+DOOM Fire pixel theme made only with HTML, CSS/SASS and JavaScript.
 
 (under development)
