@@ -54,7 +54,7 @@
     }
 
     const start = () => {
-        let decay = 12
+        let decay = 15
         let fireIntensity = 36
         let controlArray = 0
         let arrayFire = generateArray()
