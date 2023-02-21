@@ -19,7 +19,7 @@ table.fire-data {
     border: 0.1rem solid #000;
 }
 
-table.fire-data td {
+table.fire-data td.no-pixel {
     text-align: center;
     font-size: 10px;
     border: 0.1rem solid rgba(0, 0, 0, 0.5);
