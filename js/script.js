@@ -17,7 +17,7 @@
     } else {
         line = 30
         column = 30
-        times = 10
+        times = 30
     }
 
     const renderFireCanvas = (fireIntensity, arrayFire) => {
