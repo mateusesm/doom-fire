@@ -15,8 +15,8 @@
         column = 10
         times = 1000
     } else {
-        line = 40
-        column = 40
+        line = 30
+        column = 30
         times = 10
     }
 
@@ -30,7 +30,7 @@
                 if (fireIntensity === 36) {
                     arrayFire[i] = fireIntensity
                 } else {
-                    let decay = Math.floor(Math.random() * 2)
+                    let decay = Math.floor(Math.random() * 3)
                     arrayFire[i] = arrayFire[i+10] - decay
                    
                     if (arrayFire[i] < 0) arrayFire[i] = 0
