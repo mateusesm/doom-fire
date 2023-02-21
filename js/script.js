@@ -9,6 +9,7 @@
     let line = 0
     let column = 0
     let times = 0
+    let wind = true
 
     if (debug) {
         line = 10
@@ -17,7 +18,7 @@
     } else {
         line = 30
         column = 30
-        times = 30
+        times = 40
     }
 
     const renderFireCanvas = (fireIntensity, arrayFire) => {
@@ -31,7 +32,12 @@
                     arrayFire[i] = fireIntensity
                 } else {
                     let decay = Math.floor(Math.random() * 3)
-                    arrayFire[i] = arrayFire[i+10] - decay
+
+                    if (wind) {
+                        arrayFire[i] = arrayFire[i+10] - decay || arrayFire[i+1]
+                    } else {
+                        arrayFire[i] = arrayFire[i+10] - decay
+                    }
                    
                     if (arrayFire[i] < 0) arrayFire[i] = 0
                 }
